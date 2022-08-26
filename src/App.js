@@ -1,45 +1,25 @@
-import './App.css';
-import { useState, useEffect } from "react";
-import { storage } from "./firebase.js";
-import {ref, uploadBytes, listAll, getDownloadURL} from "firebase/storage";
-import { v4 } from "uuid";
+import React from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { Home } from './Components/Home'
+import { Login } from './Components/Login'
+import { Signup } from './Components/Signup'
+import { NotFound } from './Components/NotFound'
+import { AddProducts } from './Components/AddProducts'
+import { Cart } from './Components/Cart'
 
-function App() {
-  const [imageUpload, setImageUpload] = useState(null);
-  const [imageList, setImageList] = useState([]);
-
-  const imageListRef = ref(storage, "Product-Images/")
-  const uploadImage = () => {
-    if (imageUpload == null) return;
-    const imageRef = ref(storage, `Product-Images/${imageUpload.name+v4()}`);
-    uploadBytes(imageRef, imageUpload).then((snapshot) =>{
-      // alert("Image Uploaded");
-      getDownloadURL(snapshot.ref).then((url) => {
-        setImageList((prev) => [...prev,url]);
-      }) 
-    })
-  }; 
-
-  useEffect(()=>{
-    listAll(imageListRef).then((response) => {
-      response.items.forEach((item) =>{
-        getDownloadURL(item).then((url) => {
-          setImageList((prev) => [...prev, url]);
-        })
-      })
-    })
-  }, [])
-
+export const App = () => {
   return (
-  <div className="App">
-    <input type="file" onChange={(event) => {setImageUpload(event.target.files[0])}} />
-    <button onClick={uploadImage}>Upload Image</button>
-    {imageList.map((url) => {
-      return <img src={url}/>
-    })}
-  </div>
-  );
-         
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component = {Home}/>
+        <Route path="/signup" component={Signup}/>
+        <Route path="/login" component={Login}/>
+        <Route path="/add-products" component={AddProducts}/>
+        <Route path="/cart" component={Cart}/>       
+        <Route component={NotFound}/>        
+      </Switch>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
