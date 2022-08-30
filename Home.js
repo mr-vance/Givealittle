@@ -147,7 +147,7 @@ export default function Home() {
               return <div className="itemdiv" onClick={() => {
                 ProductView(item)
               }}>
-                <img src={item.Image} alt="nope" />
+                <img src={item.url} alt="nope" />
                 <div className="textdiv">
                   <h1 className="itemname">{item.title}</h1>
                 </div>
