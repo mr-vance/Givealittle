@@ -1,6 +1,6 @@
 import React, { useContext, useRef } from "react";
 import { useState, useEffect } from 'react';
-import { db } from './firebase-config';
+import { db } from '../Config/Config';
 import { collection, getDocs, addDoc } from "firebase/firestore";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './Home.css';
