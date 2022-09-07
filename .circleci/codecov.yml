@@ -19,3 +19,5 @@ workflows:
           version: '16.10'
           # If you are using yarn, change the line below from "npm" to "yarn"
           pkg-manager: npm
+codecov: 
+ token: b81e7c7b-c1d7-48f4-b478-326675cbedc7
