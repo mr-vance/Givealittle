@@ -31,7 +31,7 @@ export const IndividualCartProduct = ({cartProduct,cartProductIncrease,cartProdu
             </div>
             <div className='product-text title'>{cartProduct.title}</div>
             <div className='product-text description'>{cartProduct.description}</div>
-            <div className='product-text price'>$ {cartProduct.price}</div>
+            <div className='product-text price'>R {cartProduct.price}</div>
             <span>Quantity</span>
             <div className='product-text quantity-box'>
                 <div className='action-btns minus' onClick={handleCartProductDecrease} >
@@ -42,7 +42,7 @@ export const IndividualCartProduct = ({cartProduct,cartProductIncrease,cartProdu
                     <Icon icon={plus} size={20}/>
                 </div>
             </div>
-            <div className='product-text cart-price'>$ {cartProduct.TotalProductPrice}</div>
+            <div className='product-text cart-price'>R {cartProduct.TotalProductPrice}</div>
             <div className='btn btn-danger btn-md cart-btn' onClick={handleCartProductDelete} >DELETE</div>            
         </div>
     )

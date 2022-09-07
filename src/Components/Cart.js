@@ -190,7 +190,7 @@ export const Cart = () => {
                         Total No of Products: <span>{totalQty}</span>
                         </div>
                         <div>
-                        Total Price to Pay: <span>$ {totalPrice}</span>
+                        Total Price to Pay: <span>R {totalPrice}</span>
                         </div>
                         <br></br>
                         <StripeCheckout
