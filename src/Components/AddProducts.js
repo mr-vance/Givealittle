@@ -3,6 +3,7 @@ import {storage,fs} from '../Config/Config'
 
 export const AddProducts = () => {
 
+    // The following are arrays that store the product info.
     const [title, setTitle]=useState('');
     const [description, setDescription]=useState('');
     const [price, setPrice]=useState('');
