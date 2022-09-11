@@ -3,6 +3,7 @@ import {storage,fs} from '../Config/Config'
 
 export const AddProducts = () => {
 
+    //Arrays to be used
     const [title, setTitle]=useState('');
     const [description, setDescription]=useState('');
     const [price, setPrice]=useState('');
