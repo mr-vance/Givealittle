@@ -4,7 +4,7 @@ import { Home } from './Components/Home'
 import { Login } from './Components/Login'
 import { Signup } from './Components/Signup'
 import { NotFound } from './Components/NotFound'
-import { AddProducts } from './Components/AddProducts'
+import { AddProducts } from './Components/AddProducts/AddProducts'
 import { Cart } from './Components/Cart'
 import { ForgotPassword } from './Components/ForgotPassword'
 
