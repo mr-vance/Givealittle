@@ -7,10 +7,10 @@ import {render, fireEvent, screen, getByText, configure, getByTextId} from '@tes
 import { toHaveAttribute } from "@testing-library/jest-dom/dist/matchers";
 
 
-// it("renders without crashing", ()=>{
-//   const div = document.createElement("div");
-//   ReactDOM.render(<label></label>, div);
-// })
+it("renders without crashing", ()=>{
+  const div = document.createElement("div");
+  ReactDOM.render(<label></label>, div);
+})
 
 test("renders product title and description text", ()=>{
   const {getByTestId, getByLabelText} = render(<AddProducts/>);
@@ -19,6 +19,7 @@ test("renders product title and description text", ()=>{
   const titleDescr = screen.getByText('Product Description');
   expect(titleLabel).toBeInTheDocument();
   expect(titleDescr).toBeInTheDocument();
+  
   // const input = screen.getByLabelText("Product Title");
   // expect(input).toHaveAttribute('type','text');
 })
