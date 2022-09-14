@@ -75,7 +75,7 @@ export const AddProducts = () => {
             </>} 
             <form autoComplete="off" className='form-group' onSubmit={handleAddProducts}>
                 <label>Product Title</label>
-                <input type="text" className='form-control' required
+                <input id="product-title" type="text" className='form-control' required
                 onChange={(e)=>setTitle(e.target.value)} value={title}></input>
                 <br></br>
                 <label>Product Description</label>

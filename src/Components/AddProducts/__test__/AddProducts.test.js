@@ -19,7 +19,6 @@ test("renders product title and description text", ()=>{
   const titleDescr = screen.getByText('Product Description');
   expect(titleLabel).toBeInTheDocument();
   expect(titleDescr).toBeInTheDocument();
-  
-  // const input = screen.getByLabelText("Product Title");
-  // expect(input).toHaveAttribute('type','text');
+
+  // expect(titleLabel).toHaveAttribute('type','text');
 })
