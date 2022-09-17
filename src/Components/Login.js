@@ -53,6 +53,9 @@ export default function Login() {
       <div className="w-100 text-center mt-2">
         Need an account? <Link to="/signup">Sign Up</Link>
       </div>
+      <div className="w-100 text-center mt-2">
+        Are you a driver? <Link to="/driverlogin">click here </Link>
+      </div>
     </>
   )
 }
