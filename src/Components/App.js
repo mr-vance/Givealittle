@@ -1,6 +1,6 @@
 import React from "react"
 import Signup from "./Signup"
-import { Container } from "react-bootstrap"
+//import { Container } from "react-bootstrap"
 import { AuthProvider } from "../contexts/AuthContext"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import {Home} from "./Home"
@@ -14,15 +14,13 @@ import DriverLogin from "./DriverLogin"
 import DriverSignup from "./DriverSignup"
 import Dashboard from "./Dashboard"
 import {Cart} from "./Cart"
+import {NotFound} from "./NotFound"
 
 
 function App() {
   return (
-    <Container
-      className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}
-    >
-      <div className="w-100" style={{ maxWidth: "400px" }}>
+    
+      
         <Router>
           <AuthProvider>
             <Switch>
@@ -37,12 +35,13 @@ function App() {
               <Route path="/cart" component={Cart} />
               <Route path="/navbar" component={Navbar} />
               <Route path="/products" component={Products} />
+              <Route component={NotFound}/>
 
             </Switch>
           </AuthProvider>
         </Router>
-      </div>
-    </Container>
+      
+   
   )
 }
 

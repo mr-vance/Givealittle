@@ -21,24 +21,6 @@ export const Home = (props) => {
 
     const uid = GetUserUid();
 
-    //getting current user function
-    //function GetCurrentUser(){
-    //    const [user, setUser]=useState(null);
-    //    useEffect(()=>{
-    //        auth.onAuthStateChanged(user=>{
-    //            if(user){
-    //                fs.collection('users').doc(user.uid).get().then(snapshot=>{
-    //                    setUser(snapshot.data().FullName);
-    //                })
-    //            }
-    //            else{
-    //                setUser(null);
-    //            }
-    //        })
-    //    },[])
-    //    return user;
-    //}
-    //getting current user function
     function GetCurrentUser(){
         const {currentUser}=useAuth();
         
