@@ -39,7 +39,7 @@ export const Home = (props) => {
     //    return user;
     //}
     //getting current user function
-        function GetCurrentUser(){
+    function GetCurrentUser(){
         const {currentUser}=useAuth();
         
         return currentUser.email;

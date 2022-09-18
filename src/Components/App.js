@@ -5,12 +5,15 @@ import { AuthProvider } from "../contexts/AuthContext"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import {Home} from "./Home"
 import Login from "./Login"
+import {Navbar} from "./Navbar"
+import { Products }from "./Products"
 import PrivateRoute from "./PrivateRoute"
 import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
 import DriverLogin from "./DriverLogin"
 import DriverSignup from "./DriverSignup"
 import Dashboard from "./Dashboard"
+import {Cart} from "./Cart"
 
 
 function App() {
@@ -31,6 +34,10 @@ function App() {
               <Route path="/driverlogin" component={DriverLogin} />
               <Route path="/driversignup" component={DriverSignup} />
               <Route path="/dashboard" component={Dashboard} />
+              <Route path="/cart" component={Cart} />
+              <Route path="/navbar" component={Navbar} />
+              <Route path="/products" component={Products} />
+
             </Switch>
           </AuthProvider>
         </Router>
