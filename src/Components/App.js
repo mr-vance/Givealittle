@@ -1,5 +1,5 @@
 import React from "react"
-import Signup from "./Signup"
+import Signup from"./Signup/Signup"
 //import { Container } from "react-bootstrap"
 import { AuthProvider } from "../contexts/AuthContext"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
@@ -14,6 +14,7 @@ import DriverLogin from "./DriverLogin"
 import DriverSignup from "./DriverSignup"
 import Dashboard from "./Dashboard"
 import {Cart} from "./Cart"
+import {AddProducts} from "./AddProducts"
 import {NotFound} from "./NotFound"
 
 
@@ -35,8 +36,8 @@ function App() {
               <Route path="/cart" component={Cart} />
               <Route path="/navbar" component={Navbar} />
               <Route path="/products" component={Products} />
+              <Route path="/addproducts" component={AddProducts} />
               <Route component={NotFound}/>
-
             </Switch>
           </AuthProvider>
         </Router>
