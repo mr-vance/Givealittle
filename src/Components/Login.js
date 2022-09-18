@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import {Link} from 'react-router-dom'
 import {auth} from '../Config/Config'
 import {useHistory} from 'react-router-dom'
+import { ForgotPassword } from './ForgotPassword'
 
 export const Login = () => {
 
@@ -51,6 +52,9 @@ export const Login = () => {
                 <div className='btn-box'>
                     <span>Don't have an account SignUp
                     <Link to="signup" className='link'> Here</Link></span>
+                    
+                    <span>Forgot Password?
+                    <Link to="forgot-password" className='link'> Reset Here</Link></span>
 
                     <button type="submit" className='btn btn-success btn-md'>LOGIN</button>
                 </div>

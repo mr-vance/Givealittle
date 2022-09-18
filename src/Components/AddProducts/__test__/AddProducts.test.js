@@ -7,18 +7,15 @@ import {render, fireEvent, screen, getByText, configure, getByTextId} from '@tes
 import { toHaveAttribute } from "@testing-library/jest-dom/dist/matchers";
 
 
-it("renders without crashing", ()=>{
-  const div = document.createElement("div");
-  ReactDOM.render(<label></label>, div);
-})
-
-test("renders product title and description text", ()=>{
+test("renders product title", ()=>{
+  
+  //calling addproduct component
   const {getByTestId, getByLabelText} = render(<AddProducts/>);
 
+  //assign html element to a variable
   const titleLabel = screen.getByText('Product Title');
-  const titleDescr = screen.getByText('Product Description');
-  expect(titleLabel).toBeInTheDocument();
-  expect(titleDescr).toBeInTheDocument();
 
-  // expect(titleLabel).toHaveAttribute('type','text');
+  //testing to check if the element is in the document
+  expect(titleLabel).toBeInTheDocument();
+
 })
