@@ -5,6 +5,7 @@ import { CartProducts } from './CartProducts';
 import StripeCheckout from 'react-stripe-checkout';
 import axios from 'axios';
 import {useHistory} from 'react-router-dom'
+import { useAuth } from '../contexts/AuthContext';
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -13,22 +14,11 @@ toast.configure();
 
 export const Cart = () => {
 
-    // getting current user function
+
     function GetCurrentUser(){
-        const [user, setUser]=useState(null);
-        useEffect(()=>{
-            auth.onAuthStateChanged(user=>{
-                if(user){
-                    fs.collection('users').doc(user.uid).get().then(snapshot=>{
-                        setUser(snapshot.data().FullName);
-                    })
-                }
-                else{
-                    setUser(null);
-                }
-            })
-        },[])
-        return user;
+        const {currentUser}=useAuth();
+        
+        return currentUser.email;
     }
 
     const user = GetCurrentUser();

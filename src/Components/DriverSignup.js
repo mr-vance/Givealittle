@@ -23,7 +23,7 @@ export default function Signup() {
       setError("")
       setLoading(true)
       await signup(emailRef.current.value, passwordRef.current.value)
-      history.push("/login")
+      history.push("/driverlogin")
     } catch {
       setError("Failed to create an account")
     }
@@ -35,7 +35,7 @@ export default function Signup() {
     <>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">Sign Up</h2>
+          <h2 className="text-center mb-4">sign up as a driver</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
@@ -58,9 +58,6 @@ export default function Signup() {
       </Card>
       <div className="w-100 text-center mt-2">
         Already have an account? <Link to="/login">Log In</Link>
-      </div>
-      <div className="w-100 text-center mt-2">
-        Are you a driver? <Link to="/driversignup">click here</Link>
       </div>
     </>
   )
