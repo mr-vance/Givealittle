@@ -25,7 +25,7 @@ export default function ForgotPassword() {
 
     setLoading(false)
   }
-
+//this is a sample comment to add myself to the contributors...
   return (
     <>
       <Card>
