@@ -12,6 +12,7 @@ export default function Login() {
   const [loading, setLoading] = useState(false)
   const history = useHistory()
 
+  //sample comment on the login component
   async function handleSubmit(e) {
     e.preventDefault()
 
