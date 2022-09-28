@@ -23,12 +23,15 @@ export const Login = () => {
             setErrorMsg('');
             setTimeout(()=>{
                 setSuccessMsg('');
+                //if successfully logged in then you'll be redirected to the home page otherwise stay in the login page
                 history.push('/');
             },3000)
         }).catch(error=>setErrorMsg(error.message));
     }
 
     return (
+        //we check if you have an account in the firebase and also check if the password is correct otherwise you can't 
+        // login in
         <div className='container'>
             <br></br>
             <br></br>

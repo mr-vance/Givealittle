@@ -19,11 +19,16 @@ export const Signup = () => {
         // console.log(fullName, email, password);
         auth.createUserWithEmailAndPassword(email,password).then((credentials)=>{
             console.log(credentials);
+            //collecting the current's users signup details and sending the 
+            //to the Firebase table called users
             fs.collection('users').doc(credentials.user.uid).set({
+                
                 FullName: fullName,
                 Email: email,
                 Password: password
             }).then(()=>{
+                //if successfully signed up then you'll get a message saying 
+                //you've signed up successfully and then you'll be redirect to the login page
                 setSuccessMsg('Signup Successfull. You will now automatically get redirected to Login');
                 setFullname('');
                 setEmail('');
@@ -31,6 +36,7 @@ export const Signup = () => {
                 setErrorMsg('');
                 setTimeout(()=>{
                     setSuccessMsg('');
+                    //redirect to the login page
                     history.push('/login');
                 },3000)
             }).catch(error=>setErrorMsg(error.message));
@@ -41,6 +47,7 @@ export const Signup = () => {
 
     return (
         <div className='container'>
+            //displaying what we need to signup , like the name, email address and password
             <br></br>
             <br></br>
             <h1>Sign Up</h1>
@@ -49,6 +56,7 @@ export const Signup = () => {
                 <div className='success-msg'>{successMsg}</div>
                 <br></br>
             </>}
+            //we also have the link to the login page if you already have an account
             <form className='form-group' autoComplete="off" onSubmit={handleSignup}>
                 <label>Full Name</label>
                 <input type="text" className='form-control' required
