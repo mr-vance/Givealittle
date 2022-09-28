@@ -1,7 +1,6 @@
 import React,{useState} from 'react'
 import {storage,fs} from '../Config/Config'
 
-//sample comment updated
 export const AddProducts = () => {
 
     //Arrays to be used
