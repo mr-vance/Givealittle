@@ -34,7 +34,9 @@ export const Home = (props) => {
             <div className='navbar'>
                 <div className='leftside'>
                     <div className='logo'>
+                        <Link to="/">
                         <img src={logo} alt="logo"/>
+                        </Link>
                     </div>
                 </div>
                 <div className='rightside'>
