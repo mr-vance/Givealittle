@@ -24,7 +24,9 @@ export const Navbar = ({user,totalProducts}) => {
         <div className='navbar'>
             <div className='leftside'>
                 <div className='logo'>
-                    <img src={logo} alt="logo"/>
+                    <a href="/">
+                        <img src={logo} alt="logo"/>
+                    </a>
                 </div>
             </div>
             <div className='rightside'>
