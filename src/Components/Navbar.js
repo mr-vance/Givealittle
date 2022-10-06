@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState, useRef, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import logo from '../Images/logo.png'
 import {Icon} from 'react-icons-kit'
@@ -16,11 +16,17 @@ export const Navbar = ({user,totalProducts}) => {
         })
     }
 
+    const searchRef = useRef();
+
+    const [searchTerm, setSearchTerm] = useState("");
+//Navigation bar
     return (
         <div className='navbar'>
             <div className='leftside'>
                 <div className='logo'>
-                    <img src={logo} alt="logo"/>
+                    <Link to="/">
+                        <img src={logo} alt="logo"/>
+                     </Link>
                 </div>
             </div>
             <div className='rightside'>
@@ -29,6 +35,17 @@ export const Navbar = ({user,totalProducts}) => {
                     <div><Link className='navlink' to="signup">SIGN UP</Link></div>
                     <div><Link className='navlink' to="login">LOGIN</Link></div>
                 </>} 
+                
+                <input type="text"
+              placeholder="Search..."
+              ref={searchRef}
+            />
+            <button className="btnsearch" onClick={() => {
+              setSearchTerm(searchRef.current.value)
+            }}>
+              {/* <SearchIcon/> */}
+              Search
+            </button>
 
                 {user&&<>
                     <div><Link className='navlink' to="/">{user}</Link></div>
@@ -46,4 +63,8 @@ export const Navbar = ({user,totalProducts}) => {
         </div>
 
     )
+
+    
+
+
 }
