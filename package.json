@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@testing-library/dom": "^8.18.1",
     "axios": "^0.21.4",
     "bootstrap": "^5.2.0",
     "firebase": "^8.10.1",
@@ -16,6 +17,7 @@
     "react-test-renderer": "^18.2.0",
     "react-toastify": "^8.0.2",
     "stripe": "^8.174.0",
+    "type-fest": "^0.13.1",
     "uuid": "^8.3.2",
     "web-vitals": "^1.1.2"
   },
@@ -52,9 +54,9 @@
     "url": "git://https://github.com/Vance97/Givealittle.git"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "@testing-library/jest-dom": "^5.16.5",
     "i": "^0.3.7",
     "npm": "^8.19.2"
   }
