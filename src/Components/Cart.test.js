@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import tsAnyKeyword from "@babel/types"
 import TestRenderer from 'react-test-renderer';
 import {render, fireEvent, screen, getByText, configure, getByTextId, getElementsByClassName} from '@testing-library/react';
-import { toHaveAttribute } from "@testing-library/jest-dom/dist/matchers";
+//import { toHaveAttribute } from "@testing-library/jest-dom/dist/matchers";
 
 
 test("renders cart title", ()=>{
