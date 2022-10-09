@@ -1,20 +1,8 @@
-[![CircleCI](https://circleci.com/gh/KgaugeloNalane/Givealittle/tree/main.svg?style=svg)](https://circleci.com/gh/KgaugeloNalane/Givealittle/tree/main)
-[![codecov](https://codecov.io/gh/testing-library/jest-dom/tree/master/src)](https://codecov.io/gh/testing-library/jest-dom/tree/master/src)
-
 <!-- prettier-ignore-start -->
 [![Build Status][build-badge]][build]
 [![Code Coverage][coverage-badge]][coverage]
 [![version][version-badge]][package]
-[![downloads][downloads-badge]][npmtrends]
 [![MIT License][license-badge]][license]
-[![All Contributors][all-contributors-badge]](#contributors)
-[![PRs Welcome][prs-badge]][prs]
-[![Code of Conduct][coc-badge]][coc]
-[![Discord][discord-badge]][discord]
-
-[![Watch on GitHub][github-watch-badge]][github-watch]
-[![Star on GitHub][github-star-badge]][github-star]
-[![Tweet][twitter-badge]][twitter]
 <!-- prettier-ignore-end -->
 
 # Getting Started with Create React App
