@@ -54,6 +54,11 @@ export const Login = () => {
 
                     <button type="submit" className='btn btn-success btn-md'>LOGIN</button>
                 </div>
+                <div className='btn-box'>
+                    <span>
+                    <Link to="forgot-password" className='link'> Forgot Password?</Link></span>
+
+                </div>
             </form>
             {errorMsg&&<>
                 <br></br>

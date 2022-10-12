@@ -5,6 +5,7 @@ import {Icon} from 'react-icons-kit'
 import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 import {auth} from '../Config/Config'
 import {useHistory} from 'react-router-dom'
+import { AiOutlineHeart } from "react-icons/ai"
 
 export const Navbar = ({user,totalProducts}) => {
 
@@ -55,6 +56,15 @@ export const Navbar = ({user,totalProducts}) => {
                         </Link>
                         <span className='cart-indicator'>{totalProducts}</span>
                     </div>
+
+                    <div className='cart-menu-btn'>
+                        <Link className='navlink' to="wishlist">
+                               
+                                        <AiOutlineHeart size={25}/>
+                        </Link>
+                        
+                    </div>
+
                     <div className='btn btn-danger btn-md'
                     onClick={handleLogout}>LOGOUT</div>
                 </>}                     

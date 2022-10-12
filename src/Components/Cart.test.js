@@ -1,6 +1,5 @@
 import { AddProducts, Login, Cart, Navbar } from "./Cart";
 import React from "react";
-import {CartProducts} from "./CartProducts";
 import { MemoryRouter } from "react-router-dom";
 import ReactDOM from 'react-dom';
 import tsAnyKeyword from "@babel/types"
