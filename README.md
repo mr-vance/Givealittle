@@ -1,5 +1,5 @@
 [![CircleCI](https://circleci.com/gh/tiisetsohub/GiveALittle/tree/dummy-transaction.svg?style=svg)](https://circleci.com/gh/tiisetsohub/GiveALittle/tree/dummy-transaction)
-[![codecov](https://codecov.io/gh/tiisetsohub/GiveALittle/branch/main/graph/badge.svg?token=UP3WVJRWXL)](https://codecov.io/gh/tiisetsohub/GiveALittle)
+[![codecov](https://codecov.io/gh/tiisetsohub/GiveALittle/branch/main/graph/badge.svg?token=UP3WVJRWXL)](https://app.codecov.io/gh/tiisetsohub/GiveALittle?search=&trend=3%20months)
 [![repo size](https://img.shields.io/github/repo-size/tiisetsohub/GiveALittle)](https://github.com/tiisetsohub/GiveALittle)
 
 # Getting Started with Create React App
