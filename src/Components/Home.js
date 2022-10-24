@@ -7,6 +7,7 @@ import logo from '../Images/logo.png'
 import {Icon} from 'react-icons-kit'
 import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 import {useHistory} from 'react-router-dom'
+import { AiOutlineHeart } from "react-icons/ai"
 
 
 export const Home = (props) => {
@@ -65,6 +66,15 @@ export const Home = (props) => {
                             </Link>
                             <span className='cart-indicator'>{totalProducts}</span>
                         </div>
+
+                        <div className='cart-menu-btn'>
+                        <Link className='navlink' to="wishlist">
+                               
+                                        <AiOutlineHeart size={25}/>
+                        </Link>
+                        
+                    </div>
+
                         <div className='btn btn-danger btn-md'
                         onClick={handleLogout}>LOGOUT</div>
                     </>}                     
@@ -151,6 +161,8 @@ export const Home = (props) => {
         })       
     },[])  
 
+    
+
     // globl variable
     let Product;
 
@@ -172,6 +184,23 @@ export const Home = (props) => {
         
     }
 
+    const addToWishlist = (product)=>{
+      if(uid!==null){
+          // console.log(product);
+          Product=product;
+          Product['qty']=1;
+          Product['TotalProductPrice']=Product.qty*Product.price;
+          fs.collection('Wishlist ' + uid).doc(product.ID).set(Product).then(()=>{
+              console.log('successfully added to wishlist');
+          })
+
+      }
+      else{
+          props.history.push('/login');
+      }
+      
+  }
+
 
     function ProductView(item) {     //handles the viewing of a product in isolation
         setShow(true)
@@ -192,6 +221,7 @@ export const Home = (props) => {
               <div>
                 <input type="number" className="edtnum" placeholder="1" min='0' max={item.Quantity} />
                 <button className="cart-btn" onClick={() => addToCart(item)}>Add to cart</button>
+                <button className="cart-btn" onClick={() => addToWishlist(item)}>Add to wishlist</button>
               </div>
     
             </div>
