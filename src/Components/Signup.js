@@ -1,7 +1,11 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect, useRef} from 'react'
 import {auth,fs} from '../Config/Config'
 import {Link} from 'react-router-dom'
 import {useHistory} from 'react-router-dom'
+import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
+import {Icon} from 'react-icons-kit'
+import logo from '../Images/logo.png'
+
 
 export const Signup = () => {
 
@@ -13,6 +17,57 @@ export const Signup = () => {
 
     const [errorMsg, setErrorMsg]=useState('');
     const [successMsg, setSuccessMsg]=useState('');
+
+    // getting current user function
+    function GetCurrentUser(){
+        const [user, setUser]=useState(null);
+        useEffect(()=>{
+            auth.onAuthStateChanged(user=>{
+                if(user){
+                    fs.collection('users').doc(user.uid).get().then(snapshot=>{
+                        setUser(snapshot.data().FullName);
+                    })
+                }
+                else{
+                    setUser(null);
+                }
+            })
+        },[])
+        return user;
+    }
+
+    const user = GetCurrentUser();
+
+    function Navbar(){
+        const history = useHistory();
+
+        const handleLogout=()=>{
+            auth.signOut().then(()=>{
+                history.push('/login');
+            })
+        }
+    
+       
+    //Navigation bar
+        return (
+            <div className='navbar'>
+                <div className='leftside'>
+                    <div className='logo'>
+                        <Link to="/">
+                        <img src={logo} alt="logo"/>
+                        </Link>
+                    </div>
+                </div>
+                <div className='rightside'>
+                    {user&&<>
+                        
+                    </>}                     
+                                    
+                </div>
+            </div>
+    
+        )
+    }
 
     const handleSignup=(e)=>{
         e.preventDefault();
@@ -40,6 +95,9 @@ export const Signup = () => {
     }
 
     return (
+        <>
+             <br></br>
+            <Navbar />
         <div className='container'>
             <br></br>
             <br></br>
@@ -73,5 +131,6 @@ export const Signup = () => {
                 <div className='error-msg'>{errorMsg}</div>                
             </>}
         </div>
+        </>
     )
 }

@@ -1,10 +1,14 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect, useRef} from 'react'
 import {Link} from 'react-router-dom'
-import {auth} from '../Config/Config'
+import {auth,fs} from '../Config/Config'
 import {useHistory} from 'react-router-dom'
+import logo from '../Images/logo.png'
+import {Icon} from 'react-icons-kit'
+import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 
 export const Login = () => {
-
+    const [fullName, setFullname]=useState('');
+    const searchRef = useRef();
     const history = useHistory();
 
     const [email, setEmail]=useState('');
@@ -12,6 +16,81 @@ export const Login = () => {
 
     const [errorMsg, setErrorMsg]=useState('');
     const [successMsg, setSuccessMsg]=useState('');
+
+    function GetCurrentUser(){
+        const [user, setUser]=useState(null);
+        useEffect(()=>{
+            auth.onAuthStateChanged(user=>{
+                if(user){
+                    fs.collection('users').doc(user.uid).get().then(snapshot=>{
+                        setUser(snapshot.data().FullName);
+                    })
+                }
+                else{
+                    setUser(null);
+                }
+            })
+        },[])
+        return user;
+    }
+
+    const user = GetCurrentUser();
+
+    function Navbar(){
+        const history = useHistory();
+
+        const handleLogout=()=>{
+            auth.signOut().then(()=>{
+                history.push('/login');
+            })
+        }
+    
+       
+    //Navigation bar
+        return (
+            <div className='navbar'>
+                <div className='leftside'>
+                    <div className='logo'>
+                        <Link to="/">
+                        <img src={logo} alt="logo"/>
+                        </Link>
+                    </div>
+                </div>
+                <div className='rightside'>
+                    {user&&<>
+                        
+                    </>}                     
+                                    
+                </div>
+            </div>
+    
+        )
+    }
+
+    const handleSignup=(e)=>{
+        e.preventDefault();
+        // console.log(fullName, email, password);
+        auth.createUserWithEmailAndPassword(email,password).then((credentials)=>{
+            console.log(credentials);
+            fs.collection('users').doc(credentials.user.uid).set({
+                FullName: fullName,
+                Email: email,
+                Password: password
+            }).then(()=>{
+                setSuccessMsg('Signup Successfull. You will now automatically get redirected to Login');
+                setFullname('');
+                setEmail('');
+                setPassword('');
+                setErrorMsg('');
+                setTimeout(()=>{
+                    setSuccessMsg('');
+                    history.push('/login');
+                },3000)
+            }).catch(error=>setErrorMsg(error.message));
+        }).catch((error)=>{
+            setErrorMsg(error.message)
+        })
+    }
 
     const handleLogin=(e)=>{
         e.preventDefault();
@@ -29,6 +108,9 @@ export const Login = () => {
     }
 
     return (
+        <>
+        <br></br>
+            <Navbar />
         <div className='container'>
             <br></br>
             <br></br>
@@ -54,16 +136,13 @@ export const Login = () => {
 
                     <button type="submit" className='btn btn-success btn-md'>LOGIN</button>
                 </div>
-                <div className='btn-box'>
-                    <span>
-                    <Link to="forgot-password" className='link'> Forgot Password?</Link></span>
-
-                </div>
+                
             </form>
             {errorMsg&&<>
                 <br></br>
                 <div className='error-msg'>{errorMsg}</div>                
             </>}
         </div>
+        </>
     )
 }
