@@ -1,5 +1,4 @@
-import React,{useState, useEffect, useRef} from 'react'
-//import { Navbar } from './Navbar'
+import React,{useState, useEffect, useRef, lazy} from 'react'
 import { Products } from './Products'
 import {auth,fs} from '../Config/Config'
 import {Link} from 'react-router-dom'
@@ -8,6 +7,9 @@ import {Icon} from 'react-icons-kit'
 import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 import {useHistory} from 'react-router-dom'
 import { AiOutlineHeart } from "react-icons/ai"
+import BootstrapCarousel from './BootstrapCarousel'
+import "./App.css";
+import StarRating from './StarRating'
 
 
 export const Home = (props) => {
@@ -19,6 +21,15 @@ export const Home = (props) => {
     const searchRef = useRef();
     
     const [searchTerm, setSearchTerm] = useState("");
+
+
+    function StarRAting(){
+      return(
+        <div className='App'>
+              <StarRating />
+          </div>
+      )
+    }
 
     function Navbar(){
         const history = useHistory();
@@ -40,12 +51,16 @@ export const Home = (props) => {
                         </Link>
                     </div>
                 </div>
+
+
                 <div className='rightside'>
     
                     {!user&&<>
+                    
                         <div><Link className='navlink' to="signup">SIGN UP</Link></div>
                         <div><Link className='navlink' to="login">LOGIN</Link></div>
                     </>} 
+                    
                     
                     <input type="text"
                   placeholder="Search..."
@@ -59,7 +74,14 @@ export const Home = (props) => {
                 </button>
     
                     {user&&<>
+
+                      <div className='centerside'>
+                  <div><Link className='navlink' to="/add-products" style={{color: 'white'}} >Are you a seller?</Link></div>
+                </div>
+                    
                         <div><Link className='navlink' to="/">{user}</Link></div>
+                        
+                        
                         <div className='cart-menu-btn'>
                             <Link className='navlink' to="cart">
                                 <Icon icon={shoppingCart} size={20}/>
@@ -209,7 +231,7 @@ export const Home = (props) => {
           <div>
     
             <div className="item-container">
-              <button className="cart-btn" onClick={() => setShow(false)}>Close</button>
+              <button className='btn btn-danger btn-md' onClick={() => setShow(false)}>Close</button>
     
               <div>
                 <img style={{ boxShadow: "0px 0px 10px 0px rgb(200, 200, 200)" }} src={item.url} />
@@ -220,8 +242,9 @@ export const Home = (props) => {
               <h1 className="product-view-price">R{item.price}</h1>
               <div>
                 <input type="number" className="edtnum" placeholder="1" min='0' max={item.Quantity} />
-                <button className="cart-btn" onClick={() => addToCart(item)}>Add to cart</button>
-                <button className="cart-btn" onClick={() => addToWishlist(item)}>Add to wishlist</button>
+                <button className='btn btn-danger btn-md' onClick={() => addToCart(item)}>Add to cart</button>
+                <button className='btn btn-danger btn-md' onClick={() => addToWishlist(item)}>Add to wishlist</button>
+                
               </div>
     
             </div>
@@ -235,9 +258,15 @@ export const Home = (props) => {
 
 
       return (
+        
         <div>
+          
+          
           <Navbar />
+          <BootstrapCarousel />
+          
           {
+            
             show ? <div className="reviewdiv">
               {text}
             </div> :
@@ -251,16 +280,19 @@ export const Home = (props) => {
                 }).map((item) => {
                   return <div className="itemdiv" onClick={() => {
                     ProductView(item)
+                    
                   }}>
                     <img src={item.url} alt="nope" />
                     <div className="textdiv">
                       <h1 className="itemname">{item.title}</h1>
                     </div>
                     <h1 className="itemprice">R{item.price}</h1>
+                    
                     {(() => {
                       if (item.Quantity == 0) {
                         return (
                           <h1 style={{ fontWeight: "bold", color: "#B38B59" }} className="item-quantity">sold out</h1>
+                          
                         )
                       } else {
                         return (
@@ -270,10 +302,20 @@ export const Home = (props) => {
                     })()}
                   </div>
                 })}
+     
+
               </div>
+              
+
           }
+          
+          
     
         </div>
+  
+        
+
+        
       );
     
     }
