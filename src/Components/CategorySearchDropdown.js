@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect } from 'react';
-import "../components/CategorySearchDropdown.css"
+import "./CategorySearchDropdown.css"
 
 function CategorySearchDropdown({searchActiveCategory, setSearchActiveCategory, currentSearchCategory, setCurrentSearchCategory, setCategoryDropdown }) {
 
