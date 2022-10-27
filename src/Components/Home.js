@@ -6,10 +6,9 @@ import logo from '../Images/logo.png'
 import {Icon} from 'react-icons-kit'
 import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 import {useHistory} from 'react-router-dom'
-import { AiOutlineHeart } from "react-icons/ai"
-import BootstrapCarousel from './BootstrapCarousel'
-import "./App.css";
-import StarRating from './StarRating'
+import CategorySelector from './CategorySelector';
+import CategorySearchDropdown from './CategorySearchDropdown';
+import SearchSuggestion from './SearchSuggestion';
 
 
 export const Home = (props) => {
