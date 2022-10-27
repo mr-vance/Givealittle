@@ -177,6 +177,7 @@ img {
   height: 250px;
   width:250px;
   object-fit: contain;
+ 
   border-radius: 5px;
 
 }
@@ -270,7 +271,7 @@ img {
 
 .cart-menu-btn .cart-indicator{
   width: 18px;
-  background-color: #02e011;
+  background-color: #e00a02;
   padding: 3px;
   border-radius: 3px;
   color: #fff;
@@ -320,4 +321,28 @@ img {
 .summary-box div{
   display: flex;
   justify-content: space-between;
+}
+
+.category-heading {
+  background-color: #4078c2;
+  margin: 15px;
+  border-radius: 15px;
+  text-align: center;
+  padding: 5px;
+}
+
+.category-search-heading {
+  background-color: #4078c2;
+  margin: 15px;
+  border-radius: 15px;
+  text-align: center;
+  padding: 5px;
+}
+
+.search-category-button {
+  width: 200px;
+  height: 28px;
+  background-color:#4078c2;
+  border: none;
+  border-radius: 5px;
 }
