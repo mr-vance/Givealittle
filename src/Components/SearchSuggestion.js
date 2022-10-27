@@ -1,5 +1,5 @@
 import React from 'react'
-import "../components/CategorySearchDropdown.css"
+import "./CategorySearchDropdown.css"
 import { useState } from 'react';
 
 function SearchSuggestion({ searchedProducts, searchTerm, setSearchTerm, suggestionDropdown, setSuggestionDropdown }) {

@@ -1,5 +1,5 @@
 import React from 'react'
-import "../components/Categories.css"
+import "./Categories.css"
 import { useState } from 'react'
 
 

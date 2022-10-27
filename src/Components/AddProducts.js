@@ -1,5 +1,12 @@
-import React,{useState} from 'react'
-import {storage,fs} from '../Config/Config'
+import React,{useState, useEffect, useRef} from 'react'
+import {storage,auth,fs} from '../Config/Config'
+import logo from '../Images/logo.png'
+import {Icon} from 'react-icons-kit'
+import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
+import {useHistory} from 'react-router-dom'
+import {Link} from 'react-router-dom'
+
+
 
 export const AddProducts = () => {
 
@@ -8,11 +15,64 @@ export const AddProducts = () => {
     const [description, setDescription]=useState('');
     const [price, setPrice]=useState('');
     const [image, setImage]=useState(null);
+    const history = useHistory();
 
     const [imageError, setImageError]=useState('');
     
     const [successMsg, setSuccessMsg]=useState('');
     const [uploadError, setUploadError]=useState('');
+
+    function GetCurrentUser(){
+        const [user, setUser]=useState(null);
+        useEffect(()=>{
+            auth.onAuthStateChanged(user=>{
+                if(user){
+                    fs.collection('users').doc(user.uid).get().then(snapshot=>{
+                        setUser(snapshot.data().FullName);
+                    })
+                }
+                else{
+                    setUser(null);
+                }
+            })
+        },[])
+        return user;
+    }
+
+    const user = GetCurrentUser();
+
+    function Navbar(){
+        const history = useHistory();
+
+        const handleLogout=()=>{
+            auth.signOut().then(()=>{
+                history.push('/login');
+            })
+        }
+    
+       
+    //Navigation bar
+        return (
+            <div className='navbar'>
+                <div className='leftside'>
+                    <div className='logo'>
+                        <Link to="/">
+                        <img src={logo} alt="logo"/>
+                        </Link>
+                    </div>
+                </div>
+                <div className='rightside'>
+                    {user&&<>
+                        
+                           
+                        
+                    </>}                     
+                                    
+                </div>
+            </div>
+    
+        )
+    }
 
     const types =['image/jpg','image/jpeg','image/png','image/PNG'];
     const handleProductImg=(e)=>{
@@ -61,12 +121,15 @@ export const AddProducts = () => {
                 }).catch(error=>setUploadError(error.message));
             })
         })
+
     }
   
     return (
+        <>
+        <div></div>
+        <Navbar />
         <div className='container'>
-            <br></br>
-            <br></br>
+    
             <h1>Add Products</h1>
             <hr></hr>        
             {successMsg&&<>
@@ -107,7 +170,9 @@ export const AddProducts = () => {
                     <div className='error-msg'>{uploadError}</div>
                     
                 </>}
+              
 
         </div>
+        </>
     )
 }
