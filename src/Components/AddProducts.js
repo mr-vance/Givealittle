@@ -1,20 +1,41 @@
+/*Importing all necessary libraries*/
+
+//Encapsulate local state in a functional component
 import React,{useState} from 'react'
+
+//Bring in the backend handlers from the Configuration file
 import {storage,fs} from '../Config/Config'
 
+//The export is for this component to be imported by other components
 export const AddProducts = () => {
 
-    //Arrays to be used
+    /*Arrays to be used down the lines*/
+
+    //This arrray holds the value of the product's title
     const [title, setTitle]=useState('');
+
+    //This arrray holds the value of the product's description
     const [description, setDescription]=useState('');
+
+    //This arrray holds the value of the product's price in Rands
     const [price, setPrice]=useState('');
+
+    //This arrray holds the value of the product's Image. Some formats not supported
     const [image, setImage]=useState(null);
 
+    //This arrray holds the value of the product's Error Message on Image
     const [imageError, setImageError]=useState('');
     
+    //This arrray holds the value of the product's Success Message on Image
     const [successMsg, setSuccessMsg]=useState('');
+
+    //This arrray holds the value of the product's Success Message on Upload
     const [uploadError, setUploadError]=useState('');
 
+    //This arrray holds the value of the product's supported Image file types
     const types =['image/jpg','image/jpeg','image/png','image/PNG'];
+
+    //Method to handle Product Image upload
     const handleProductImg=(e)=>{
         let selectedFile = e.target.files[0];
         if(selectedFile){
@@ -32,6 +53,7 @@ export const AddProducts = () => {
         }
     }
 
+    //Method to update uploaded image onto the backend (Firebase Database)
     const handleAddProducts=(e)=>{
         e.preventDefault();
         // console.log(title, description, price);
@@ -63,6 +85,7 @@ export const AddProducts = () => {
         })
     }
   
+    //The following returns the frontend page for Adding Products as defined above
     return (
         <div className='container'>
             <br></br>
