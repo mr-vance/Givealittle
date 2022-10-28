@@ -61,20 +61,6 @@ export const Wishlist = () => {
         })
     },[])
 
-    // console.log(wishlistProducts);
-    
-    // getting the qty from wishlistProducts in a seperate array
-   // const qty = wishlistProducts.map(wishlistProduct=>{
-     //   return wishlistProduct.qty;
-   // })
-
-    // reducing the qty in a single value
-   // const reducerOfQty = (accumulator, currentValue)=>accumulator+currentValue;
-
-    //const totalQty = qty.reduce(reducerOfQty,0);
-
-    // console.log(totalQty);
-
     // getting the TotalProductPrice from wishlistProducts in a seperate array
     const price = wishlistProducts.map((wishlistProduct)=>{
         return wishlistProduct.TotalProductPrice;
@@ -175,7 +161,7 @@ export const Wishlist = () => {
             alert('Something went wrong in checkout');
         }
      }
-
+     //showing the navigation bar in the wishlist 
      function Navbar(){
         const history = useHistory();
 
@@ -186,6 +172,8 @@ export const Wishlist = () => {
         }
 
      return (
+        //showing the logo of ours on the left side of the navigation bar ,and the cart and the heart icons on the right-side of the
+        //navigation bar
         <div className='navbar'>
             <div className='leftside'>
                 <div className='logo'>
@@ -211,10 +199,13 @@ export const Wishlist = () => {
               {/* <SearchIcon/> */}
               Search
             </button>
-
+            
                 {user&&<>
+                
                     <div><Link className='navlink' to="/">{user}</Link></div>
+            
                     <div className='cart-menu-btn'>
+                 
                         <Link className='navlink' to="cart">
                             <Icon icon={shoppingCart} size={20}/>
                             
