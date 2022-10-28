@@ -1,4 +1,4 @@
-import React,{useState, useEffect, useRef, lazy} from 'react'
+import React,{useState, useEffect, useRef} from 'react'
 import { Products } from './Products'
 import {auth,fs} from '../Config/Config'
 import {Link} from 'react-router-dom'
@@ -23,7 +23,6 @@ export const Home = (props) => {
     const searchRef = useRef();
     
     const [searchTerm, setSearchTerm] = useState("");
-
 
 // Category code-----------------------------------------------------------------------------------------------------------
 
@@ -280,16 +279,6 @@ const [suggestionDropdown, setSuggestionDropdown] = useState(true);
     
 
 
-
-    function StarRAting(){
-      return(
-        <div className='App'>
-              <StarRating />
-          </div>
-      )
-    }
-
-
     function Navbar(){
         const history = useHistory();
 
@@ -311,39 +300,20 @@ const [suggestionDropdown, setSuggestionDropdown] = useState(true);
                         </Link>
                     </div>
                 </div>
-
-
                 <div className='rightside'>
                     
     
                     {!user&&<>
-                    
                         <div><Link className='navlink' to="signup">SIGN UP</Link></div>
                         <div><Link className='navlink' to="login">LOGIN</Link></div>
                     </>} 
-                    
                     
                     <input type="text"
                   placeholder="Search..."
                   ref={searchRef}
                 />
 
-                        <div className='drop-down-container'>
-                            <button className='search-category-button' onClick={handleDropdown}>
-                                {currentSearchCategory}
-                            </button>
-                                {categoryDropdown ? 
-                                    <CategorySearchDropdown 
-                                        searchActiveCategory={searchActiveCategory} 
-                                        setSearchActiveCategory={setSearchActiveCategory} 
-                                        currentSearchCategory={currentSearchCategory} 
-                                        setCurrentSearchCategory={setCurrentSearchCategory} 
-                                        setCategoryDropdown={setCategoryDropdown}/>
-                                    : null
-                                }
-                        </div>
-
-
+                       
                 <button className="btnsearch" onClick={() => {
                   setSearchTerm(searchRef.current.value)
                 }}>
@@ -352,14 +322,7 @@ const [suggestionDropdown, setSuggestionDropdown] = useState(true);
                 </button>
     
                     {user&&<>
-
-                      <div className='centerside'>
-                  <div><Link className='navlink' to="/add-products" style={{color: 'white'}} >Are you a seller?</Link></div>
-                </div>
-                    
                         <div><Link className='navlink' to="/">{user}</Link></div>
-                        
-                        
                         <div className='cart-menu-btn'>
                             <Link className='navlink' to="cart">
                                 <Icon icon={shoppingCart} size={20}/>
@@ -501,7 +464,7 @@ const [suggestionDropdown, setSuggestionDropdown] = useState(true);
           <div>
     
             <div className="item-container">
-              <button className='btn btn-danger btn-md' onClick={() => setShow(false)}>Close</button>
+              <button className="cart-btn" onClick={() => setShow(false)}>Close</button>
     
               <div>
                 <img style={{ boxShadow: "0px 0px 10px 0px rgb(200, 200, 200)" }} src={item.url} />
@@ -512,9 +475,8 @@ const [suggestionDropdown, setSuggestionDropdown] = useState(true);
               <h1 className="product-view-price">R{item.price}</h1>
               <div>
                 <input type="number" className="edtnum" placeholder="1" min='0' max={item.Quantity} />
-                <button className='btn btn-danger btn-md' onClick={() => addToCart(item)}>Add to cart</button>
-                <button className='btn btn-danger btn-md' onClick={() => addToWishlist(item)}>Add to wishlist</button>
-                
+                <button className="btnsearch" onClick={() => addToCart(item)}>Add to cart</button>
+                <button className="btnsearch" onClick={() => addToWishlist(item)}>Add to wishlist</button>
               </div>
     
             </div>
@@ -528,9 +490,7 @@ const [suggestionDropdown, setSuggestionDropdown] = useState(true);
 
 
       return (
-        
         <div>
-
         <Navbar />
         <SearchSuggestion 
             searchedProducts={searchedProducts} 
@@ -538,7 +498,7 @@ const [suggestionDropdown, setSuggestionDropdown] = useState(true);
             setSearchTerm={setSearchTerm}
             suggestionDropdown={suggestionDropdown}
             setSuggestionDropdown={setSuggestionDropdown}/>
-        <input className='edtsearch' placeholder='Search' type="text" value={searchTerm} onChange={handleSearchTermChange}></input>
+
 
         {isFilter ? 
         
@@ -571,9 +531,9 @@ const [suggestionDropdown, setSuggestionDropdown] = useState(true);
                     <div key={itemIndex} className="itemdiv" onClick={() => {
                         ProductView(item)
                     }}>
-                        <img src={item.Image} alt="nope" />
+                        <img src={item.url} alt="nope" />
                         <div className="textdiv">
-                            <h1 className="itemname">{item.Name}</h1>
+                            <h1 className="itemname">{item.title}</h1>
                         </div>
                         <h1 className="itemprice">R{item.Price}</h1>
                         {(() => {
@@ -607,11 +567,11 @@ const [suggestionDropdown, setSuggestionDropdown] = useState(true);
                     <div key={itemIndex} className="itemdiv" onClick={() => {
                         ProductView(item)
                     }}>
-                        <img src={item.Image} alt="nope" />
+                        <img src={item.url} alt="nope" />
                         <div className="textdiv">
-                            <h1 className="itemname">{item.Name}</h1>
+                            <h1 className="itemname">{item.title}</h1>
                         </div>
-                        <h1 className="itemprice">R{item.Price}</h1>
+                        <h1 className="itemprice">R{item.price}</h1>
                 
                         {(() => {
                             if (item.Quantity == 0) {
@@ -636,19 +596,9 @@ const [suggestionDropdown, setSuggestionDropdown] = useState(true);
 
         <h6 className='category-heading'>All products{" (" + categoriesActivity.find(category => category.categoryName == "All").products.length + ")"}</h6>
         {
-
-          
-          
-          <Navbar />
-          <BootstrapCarousel />
-          
-          {
-            
-
             show ? <div className="reviewdiv">
                 {text}
             </div> :
-
                 <div className="bodydiv" >
                     {products.map((item, indx) => {
                         return (
@@ -659,7 +609,7 @@ const [suggestionDropdown, setSuggestionDropdown] = useState(true);
                             <div className="textdiv">
                                 <h1 className="itemname">{item.title}</h1>
                             </div>
-                            <h1 className="itemprice">R{item.Price}</h1>
+                            <h1 className="itemprice">R{item.price}</h1>
             
                             {(() => {
                                 if (item.Quantity == 0) {
@@ -680,54 +630,5 @@ const [suggestionDropdown, setSuggestionDropdown] = useState(true);
 
     </div>
 );
-
-              <div className="bodydiv" >
-                {products.filter((item) => {
-                  if (searchTerm == "") {
-                    return item
-                  } else if (item.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
-                    return item
-                  }
-                }).map((item) => {
-                  return <div className="itemdiv" onClick={() => {
-                    ProductView(item)
-                    
-                  }}>
-                    <img src={item.url} alt="nope" />
-                    <div className="textdiv">
-                      <h1 className="itemname">{item.title}</h1>
-                    </div>
-                    <h1 className="itemprice">R{item.price}</h1>
-                    
-                    {(() => {
-                      if (item.Quantity == 0) {
-                        return (
-                          <h1 style={{ fontWeight: "bold", color: "#B38B59" }} className="item-quantity">sold out</h1>
-                          
-                        )
-                      } else {
-                        return (
-                          <h1 className="item-quantity">in stock</h1>
-                        )
-                      }
-                    })()}
-                  </div>
-                })}
-     
-
-              </div>
-              
-
-          }
-          
-          
-    
-        </div>
-  
-        
-
-        
-      );
-
     
     }
