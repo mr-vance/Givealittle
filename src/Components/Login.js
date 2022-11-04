@@ -73,6 +73,7 @@ export const Login = () => {
         // console.log(fullName, email, password);
         auth.createUserWithEmailAndPassword(email,password).then((credentials)=>{
             console.log(credentials);
+            //creating the columns in the firebase firestor section
             fs.collection('users').doc(credentials.user.uid).set({
                 FullName: fullName,
                 Email: email,
