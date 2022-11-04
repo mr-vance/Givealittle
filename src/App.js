@@ -26,7 +26,7 @@ export const App = () => {
         <Route path="/cart" component={Cart}/>  
         {/* route to the wishlist page */}
         <Route path="/wishlist" component={Wishlist}/>  
-
+        {/* route to the not found page */}
         <Route component={NotFound}/>        
       </Switch>
     </BrowserRouter>
