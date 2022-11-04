@@ -61,7 +61,7 @@ export const Navbar = ({user,totalProducts}) => {
 
                     <div className='cart-menu-btn'>
                         <Link className='navlink' to="wishlist">
-                               
+                               {/* shows the heart which is an icon for the wishlist component */}
                                         <AiOutlineHeart size={25}/>
                         </Link>
                         
