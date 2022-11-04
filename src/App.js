@@ -14,6 +14,7 @@ export const App = () => {
 
     <BrowserRouter>
       <Switch>
+         {/* route to the home page */}
         <Route exact path="/" component = {Home}/>
         <Route path="/signup" component={Signup}/>
         <Route path="/login" component={Login}/>
