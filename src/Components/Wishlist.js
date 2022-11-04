@@ -251,6 +251,7 @@ export const Wishlist = () => {
                                                        
                 </div>
             )}
+             {/* if the are no products in the wishlist product the page will show the following message */}
             {wishlistProducts.length < 1 && (
                 <div className='container-fluid'>No products to show</div>
             ) }           
