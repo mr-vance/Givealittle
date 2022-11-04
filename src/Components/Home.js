@@ -9,7 +9,7 @@ import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 import {useHistory} from 'react-router-dom'
 import { AiOutlineHeart } from "react-icons/ai"
 
-
+//home page levol vibes
 export const Home = (props) => {
 
     const [show, setShow] = useState(false);            //state for showing cart
