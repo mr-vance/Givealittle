@@ -54,6 +54,7 @@ export const Navbar = ({user,totalProducts}) => {
                     <div><Link className='navlink' to="/">{user}</Link></div>
                     <div className='cart-menu-btn'>
                         <Link className='navlink' to="cart">
+                             {/* shows the cart which is an icon for the cart component */}
                             <Icon icon={shoppingCart} size={20}/>
                         </Link>
                         <span className='cart-indicator'>{totalProducts}</span>
