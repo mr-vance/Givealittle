@@ -24,6 +24,7 @@ export const App = () => {
         <Route path="/add-products" component={AddProducts}/>
         {/* route to the cart page */}
         <Route path="/cart" component={Cart}/>  
+        {/* route to the wishlist page */}
         <Route path="/wishlist" component={Wishlist}/>  
 
         <Route component={NotFound}/>        
