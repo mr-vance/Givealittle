@@ -79,6 +79,7 @@ export const Signup = () => {
                 Email: email,
                 Password: password
             }).then(()=>{
+                //the message that the user will see after successfully signing up
                 setSuccessMsg('Signup Successfull. You will now automatically get redirected to Login');
                 setFullname('');
                 setEmail('');
