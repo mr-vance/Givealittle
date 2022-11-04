@@ -136,7 +136,7 @@ export const Cart = () => {
          })       
      },[])
      
-     // charging payment
+     // charging payments
      const history = useHistory();
      const handleToken = async(token)=>{
         //  console.log(token);
