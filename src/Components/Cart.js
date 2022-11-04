@@ -107,7 +107,7 @@ export const Cart = () => {
         if(Product.qty > 1){
             Product.qty=Product.qty-1;
             Product.TotalProductPrice=Product.qty*Product.price;
-             // updating in database
+             // updating in fibase database
             auth.onAuthStateChanged(user=>{
                 if(user){
                     fs.collection('Cart ' + user.uid).doc(cartProduct.ID).update(Product).then(()=>{
