@@ -18,6 +18,7 @@ export const App = () => {
         <Route exact path="/" component = {Home}/>
         {/* route to the signup page */}
         <Route path="/signup" component={Signup}/>
+        {/* route to the login page */}
         <Route path="/login" component={Login}/>
         <Route path="/add-products" component={AddProducts}/>
         <Route path="/cart" component={Cart}/>  
