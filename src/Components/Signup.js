@@ -20,6 +20,7 @@ export const Signup = () => {
 
     // getting current user function
     function GetCurrentUser(){
+        //setting the current user to a variable
         const [user, setUser]=useState(null);
         useEffect(()=>{
             auth.onAuthStateChanged(user=>{
