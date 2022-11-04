@@ -93,7 +93,7 @@ export const Signup = () => {
             setErrorMsg(error.message)
         })
     }
-
+    //putting the navbar in place and other components for the user's satisfaction
     return (
         <>
              <br></br>
