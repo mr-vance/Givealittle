@@ -112,6 +112,7 @@ export const Login = () => {
     return (
         <>
         <br></br>
+         {/* calling the navibar in the login page */}
             <Navbar />
         <div className='container'>
             <br></br>
