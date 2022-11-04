@@ -7,6 +7,7 @@ export default function BootstrapCarousel() {
         <div>
             {
             <Carousel>
+                 {/* having three pictures in the carousel slide */}
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
