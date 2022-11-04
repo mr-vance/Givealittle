@@ -7,7 +7,7 @@ import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 import {Icon} from 'react-icons-kit'
 import logo from '../Images/logo.png'
 
-
+//exporting the sign up as a const
 export const Signup = () => {
 
     const history = useHistory();  
