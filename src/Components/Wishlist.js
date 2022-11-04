@@ -206,7 +206,7 @@ export const Wishlist = () => {
                     <div><Link className='navlink' to="/">{user}</Link></div>
             
                     <div className='cart-menu-btn'>
-                 
+                     {/* shows the cart which is an icon for the cart component */}
                         <Link className='navlink' to="cart">
                             <Icon icon={shoppingCart} size={20}/>
                             
