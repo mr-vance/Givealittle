@@ -24,6 +24,7 @@ export const Navbar = ({user,totalProducts}) => {
     return (
         <div className='navbar'>
             <div className='leftside'>
+                 {/* shows the logo of our product and also is clickable to go to the home page */}
                 <div className='logo'>
                     <Link to="/">
                         <img src={logo} alt="logo"/>
