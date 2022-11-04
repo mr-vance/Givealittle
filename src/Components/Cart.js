@@ -188,6 +188,7 @@ export const Cart = () => {
                         <h5>Cart Summary</h5>
                         <br></br>
                         <div>
+                            {/* display the number of items in the cart page */}
                         Total No of Products: <span>{totalQty}</span>
                         </div>
                         <div>
