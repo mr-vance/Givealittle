@@ -37,7 +37,7 @@ export const Signup = () => {
     }
 
     const user = GetCurrentUser();
-
+    //the function for the navigation bae which will be later used
     function Navbar(){
         const history = useHistory();
 
