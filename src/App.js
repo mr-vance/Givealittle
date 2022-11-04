@@ -16,6 +16,7 @@ export const App = () => {
       <Switch>
          {/* route to the home page */}
         <Route exact path="/" component = {Home}/>
+        {/* route to the signup page */}
         <Route path="/signup" component={Signup}/>
         <Route path="/login" component={Login}/>
         <Route path="/add-products" component={AddProducts}/>
