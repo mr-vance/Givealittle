@@ -221,6 +221,7 @@ export const Wishlist = () => {
                         </Link>
                         
                     </div>
+                     {/* shows the logout button in the nav bar */}
                     <div className='btn btn-danger btn-md'
                     onClick={handleLogout}>LOGOUT</div>
                 </>}                     
