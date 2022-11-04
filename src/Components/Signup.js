@@ -45,6 +45,7 @@ export const Signup = () => {
 
         const handleLogout=()=>{
             auth.signOut().then(()=>{
+            //sending to the login page
                 history.push('/login');
             })
         }
