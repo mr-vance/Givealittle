@@ -7,6 +7,7 @@ import {Icon} from 'react-icons-kit'
 import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 
 export const Login = () => {
+    //creating different holding variables
     const [fullName, setFullname]=useState('');
     const searchRef = useRef();
     const history = useHistory();
