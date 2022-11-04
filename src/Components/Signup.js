@@ -14,7 +14,7 @@ export const Signup = () => {
     const [fullName, setFullname]=useState('');
     const [email, setEmail]=useState('');
     const [password, setPassword]=useState('');
-
+    //initializing the error message variable and the success message when all is well
     const [errorMsg, setErrorMsg]=useState('');
     const [successMsg, setSuccessMsg]=useState('');
 
