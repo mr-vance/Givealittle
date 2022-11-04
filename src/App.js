@@ -20,6 +20,7 @@ export const App = () => {
         <Route path="/signup" component={Signup}/>
         {/* route to the login page */}
         <Route path="/login" component={Login}/>
+        {/* route to the add products page */}
         <Route path="/add-products" component={AddProducts}/>
         <Route path="/cart" component={Cart}/>  
         <Route path="/wishlist" component={Wishlist}/>  
