@@ -7,7 +7,7 @@ import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 import {Icon} from 'react-icons-kit'
 import logo from '../Images/logo.png'
 
-//exporting the sign up as a const
+//exporting the sign up as a const   
 export const Signup = () => {
 
     const history = useHistory();  
@@ -37,7 +37,7 @@ export const Signup = () => {
         },[])
         return user;
     }
-
+    //setting the constant variable user to the current user by calling a function
     const user = GetCurrentUser();
     //the function for the navigation bae which will be later used
     function Navbar(){
