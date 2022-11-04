@@ -25,6 +25,7 @@ export const Wishlist = () => {
         useEffect(()=>{
             auth.onAuthStateChanged(user=>{
                 if(user){
+                    //goes to the fibase firestore and look for the "users" table and collect the relevant info.
                     fs.collection('users').doc(user.uid).get().then(snapshot=>{
                         setUser(snapshot.data().FullName);
                     })
