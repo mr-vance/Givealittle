@@ -1,3 +1,4 @@
+//importing all the relevant things for the sign up page
 import React,{useState, useEffect, useRef} from 'react'
 import {auth,fs} from '../Config/Config'
 import {Link} from 'react-router-dom'
