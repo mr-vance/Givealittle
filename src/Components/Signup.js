@@ -68,7 +68,7 @@ export const Signup = () => {
     
         )
     }
-
+    //handling when the user signs up
     const handleSignup=(e)=>{
         e.preventDefault();
         // console.log(fullName, email, password);
