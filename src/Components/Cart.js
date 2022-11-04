@@ -172,7 +172,7 @@ export const Cart = () => {
      }
    
     return (
-        <>
+        <>{/* calls the navigation bar */}
             <Navbar user={user} totalProducts={totalProducts} />           
             <br></br>
             {cartProducts.length > 0 && (
