@@ -115,6 +115,7 @@ export const Cart = () => {
                     })
                 }
                 else{
+                    //when user not logged in
                     console.log('user is not logged in to decrement');
                 }
             })
