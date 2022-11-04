@@ -9,8 +9,8 @@ import logo from '../Images/logo.png'
 
 export const Signup = () => {
 
-    const history = useHistory();
-
+    const history = useHistory();  
+    //initializing the variables such as full name, email and password
     const [fullName, setFullname]=useState('');
     const [email, setEmail]=useState('');
     const [password, setPassword]=useState('');
