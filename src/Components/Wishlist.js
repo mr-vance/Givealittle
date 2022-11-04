@@ -237,6 +237,7 @@ export const Wishlist = () => {
         <>
                      
             <br></br>
+             {/* calls the navigation bar in the wishlist page */}
             <Navbar />
             {wishlistProducts.length > 0 && (
                 <div className='container-fluid'>
