@@ -206,6 +206,7 @@ export const Cart = () => {
                     </div>                                    
                 </div>
             )}
+             {/* if no products are in the cart list then it will display the following message */}
             {cartProducts.length < 1 && (
                 <div className='container-fluid'>No products to show</div>
             ) }           
