@@ -35,6 +35,7 @@ export const Navbar = ({user,totalProducts}) => {
                 {!user&&<>
                     {/* link to the sign up page */}
                     <div><Link className='navlink' to="signup">SIGN UP</Link></div>
+                    {/* link to the login page */}
                     <div><Link className='navlink' to="login">LOGIN</Link></div>
                 </>} 
                 
