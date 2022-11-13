@@ -2,6 +2,8 @@ import React from 'react'
 import { useEffect } from 'react';
 import "./CategorySearchDropdown.css"
 
+
+//This code helps user filter products by category
 function CategorySearchDropdown({searchActiveCategory, setSearchActiveCategory, currentSearchCategory, setCurrentSearchCategory, setCategoryDropdown }) {
 
  //Function to select a category
