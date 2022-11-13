@@ -5,6 +5,7 @@ import {useHistory} from 'react-router-dom'
 import logo from '../Images/logo.png'
 import Footer from '../Footer'
 import {Icon} from 'react-icons-kit'
+import { MDBInput } from 'mdb-react-ui-kit';
 import "rsuite/dist/rsuite.min.css";
 import { Button } from 'react-bootstrap'
 import Spinner from 'react-bootstrap/Spinner';

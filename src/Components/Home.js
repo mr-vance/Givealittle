@@ -3,6 +3,7 @@ import { Products } from './Products'
 import {auth,fs} from '../Config/Config'
 import {Link} from 'react-router-dom'
 import logo from '../Images/logo.png'
+import Form from 'react-bootstrap-form';
 import {Icon} from 'react-icons-kit'
 import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 import {useHistory} from 'react-router-dom'
@@ -65,16 +66,11 @@ export const Home = (props) => {
                     
                     
                     <input type="text"
-                  placeholder="Search..."
+                  placeholder="SEARCH" style={{height:39, borderRadius:7, textAlign:"center", marginRight:10}}
                   ref={searchRef}
                 />
-                <button className="btnsearch" onClick={() => {
-                  setSearchTerm(searchRef.current.value)
-                }}>
-                  {/* <SearchIcon/> */}
-                  Search
-                </button>
-    
+                <Button variant="secondary" onClick={() => {
+                  setSearchTerm(searchRef.current.value)}}>Search</Button>
                     {user&&<>
 
                       <div className='centerside'>
