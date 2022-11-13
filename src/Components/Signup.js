@@ -5,8 +5,8 @@ import {useHistory} from 'react-router-dom'
 import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 import {Icon} from 'react-icons-kit'
 import logo from '../Images/logo.png'
-import Button from 'react-bootstrap/Button';
-import Footer from '../Footer'
+import Button from 'react-bootstrap/Button'
+import OutsideFooter from './OutsideFooter'
 
 
 export const Signup = () => {
@@ -135,7 +135,7 @@ export const Signup = () => {
             </>}
         </div>
         <div className='footer' style={{marginTop:100}}>
-            <Footer/>
+            <OutsideFooter/>
         </div>
         
         </>

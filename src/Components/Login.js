@@ -8,6 +8,7 @@ import {Icon} from 'react-icons-kit'
 import { MDBInput } from 'mdb-react-ui-kit';
 import "rsuite/dist/rsuite.min.css";
 import { Button } from 'react-bootstrap'
+import OutsideFooter from './OutsideFooter'
 import Spinner from 'react-bootstrap/Spinner';
 import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 
@@ -150,7 +151,7 @@ export const Login = () => {
             </>}
         </div>
         <div className='footer' style={{marginTop:100}}>
-            <Footer/>
+            <OutsideFooter/>
         </div>
         </>
     )

@@ -9,6 +9,7 @@ import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 import {useHistory} from 'react-router-dom'
 import { AiOutlineHeart } from "react-icons/ai"
 import Footer from '../Footer'
+import OutsideFooter from './OutsideFooter'
 import BootstrapCarousel from './BootstrapCarousel'
 import "./App.css";
 import Button from 'react-bootstrap/Button';
@@ -315,7 +316,15 @@ export const Home = (props) => {
           
           
           <div className='footer' style={{marginTop:100}}>
-            <Footer/>
+
+          {!user&&<>
+          <OutsideFooter/>
+          </>} 
+
+          {user&&<>
+          <Footer/>
+          </>} 
+
         </div>
         </div>
         

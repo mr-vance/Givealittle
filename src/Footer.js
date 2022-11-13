@@ -1,7 +1,10 @@
-import React from 'react';
-import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import React from 'react'
+import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit'
+
+
 
 export default function Footer() {
+
   return (
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
@@ -33,7 +36,7 @@ export default function Footer() {
                 </a>
               </p>
               <p>
-                <a href='#' className='text-reset'>
+                <a className='text-reset'>
                   LogOut
                 </a>
               </p>
@@ -42,17 +45,17 @@ export default function Footer() {
             <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Shopping</h6>
               <p>
-                <a href='#!' className='text-reset'>
+                <a href='http://localhost:3000/cart' className='text-reset'>
                   Cart
                 </a>
               </p>
               <p>
-                <a href='#!' className='text-reset'>
+                <a href='http://localhost:3000/wishlist' className='text-reset'>
                   WishList
                 </a>
               </p>
               <p>
-                <a href='#!' className='text-reset'>
+                <a href='http://localhost:3000/add-products' className='text-reset'>
                   SellPoint
                 </a>
               </p>
