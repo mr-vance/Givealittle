@@ -7,6 +7,7 @@ import Footer from '../Footer'
 import {Icon} from 'react-icons-kit'
 import "rsuite/dist/rsuite.min.css";
 import { Button } from 'react-bootstrap'
+import Spinner from 'react-bootstrap/Spinner';
 import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 
 export const Login = () => {
@@ -138,6 +139,7 @@ export const Login = () => {
                     <Link to="signup" className='link'> Here</Link></span>
 
                     <Button type="submit" variant="outline-primary">LogIn</Button>
+                    
                 </div>
                 
             </form>

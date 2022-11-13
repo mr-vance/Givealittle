@@ -246,9 +246,9 @@ export const Home = (props) => {
               <p>{item.description}</p>
               <h1 className="product-view-price">R{item.price}</h1>
               <div>
-                <input type="number" className="edtnum" placeholder="1" min='0' max={item.Quantity} />
-                <button className='btn btn-danger btn-md' onClick={() => addToCart(item)}>Add to cart</button>
-                <button className='btn btn-danger btn-md' onClick={() => addToWishlist(item)}>Add to wishlist</button>
+                
+                <button style={{marginRight:10}} className='btn btn-danger btn-md' onClick={() => addToCart(item)}>Add to cart</button>
+                <button style={{marginLeft:10}} className='btn btn-danger btn-md' onClick={() => addToWishlist(item)}>Add to wishlist</button>
                 
               </div>
     
