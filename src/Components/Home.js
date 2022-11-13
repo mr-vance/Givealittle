@@ -7,12 +7,11 @@ import {Icon} from 'react-icons-kit'
 import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 import {useHistory} from 'react-router-dom'
 import CategorySelector from './CategorySelector';
-import CategorySearchDropdown from './CategorySearchDropdown';
 import SearchSuggestion from './SearchSuggestion';
 
 
 export const Home = (props) => {
-
+//constant variables
     const [show, setShow] = useState(false);            //state for showing cart
     const [text, setText] = useState("");  
 
