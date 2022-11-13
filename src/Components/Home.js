@@ -235,7 +235,7 @@ export const Home = (props) => {
         setText(
           <div>
     
-            <div className="item-container">
+            <div className="item-container" style={{backgroundColor:"white"}}>
               <button className='btn btn-danger btn-md' onClick={() => setShow(false)}>Close</button>
     
               <div>
