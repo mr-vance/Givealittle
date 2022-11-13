@@ -6,6 +6,7 @@ import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 import {auth} from '../Config/Config'
 import {useHistory} from 'react-router-dom'
 import { AiOutlineHeart } from "react-icons/ai"
+import Button from 'react-bootstrap/Button';
 
 export const Navbar = ({user,totalProducts}) => {
 
@@ -38,15 +39,15 @@ export const Navbar = ({user,totalProducts}) => {
                 </>} 
                 
                 <input type="text"
-              placeholder="Search..."
-              ref={searchRef}
-            />
-            <button className="btnsearch" onClick={() => {
+                  placeholder="SEARCH" style={{height:39, borderRadius:7, textAlign:"center", marginRight:10}}
+                  ref={searchRef}
+                />
+            <Button variant='secondary' onClick={() => {
               setSearchTerm(searchRef.current.value)
             }}>
               {/* <SearchIcon/> */}
               Search
-            </button>
+            </Button>
 
                 {user&&<>
                     <div><Link className='navlink' to="/">{user}</Link></div>
