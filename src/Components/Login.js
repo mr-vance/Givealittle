@@ -137,7 +137,7 @@ export const Login = () => {
                 onChange={(e)=>setPassword(e.target.value)} value={password}></input>
                 <br></br>
                 <div className='btn-box'>
-                    <span>Don't have an account SignUp
+                    <span>Don't have an account? SignUp
                     <Link to="signup" className='link'> Here</Link></span>
 
                     <Button type="submit" variant="outline-primary">LogIn</Button>

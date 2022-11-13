@@ -33,8 +33,8 @@ export default function Footer() {
                 </a>
               </p>
               <p>
-                <a href='#!' className='text-reset'>
-                  LogOut
+                <a href='http://localhost:3000/login' className='text-reset'>
+                  LogIn
                 </a>
               </p>
             </MDBCol>
