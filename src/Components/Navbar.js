@@ -22,7 +22,7 @@ export const Navbar = ({user,totalProducts}) => {
     const [searchTerm, setSearchTerm] = useState("");
 //Navigation bar
     return (
-        <div className='navbar'>
+        <div className='navbar' style={{marginTop:-25}} >
             <div className='leftside'>
                 <div className='logo'>
                     <Link to="/">

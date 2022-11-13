@@ -6,6 +6,7 @@ import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 import {useHistory} from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import Footer from '../Footer'
+import { Button } from 'react-bootstrap'
 
 
 
@@ -131,7 +132,7 @@ export const AddProducts = () => {
         <Navbar />
         <div className='container'>
     
-            <h1>Add Products</h1>
+            <h1 style={{marginTop:20}}>Add Products</h1>
             <hr></hr>        
             {successMsg&&<>
                 <div className='success-msg'>{successMsg}</div>
@@ -161,9 +162,7 @@ export const AddProducts = () => {
                 </>}
                 <br></br>           
                 <div style={{display:'flex', justifyContent:'flex-end'}}>
-                    <button type="submit" className='btn btn-success btn-md'>
-                        SUBMIT
-                    </button>
+                <Button type="submit" variant="outline-primary">Add Product</Button>
                 </div>
             </form>
             {uploadError&&<>
@@ -174,7 +173,9 @@ export const AddProducts = () => {
               
 
         </div>
-        <Footer/>
+        <div className='footer' style={{marginTop:100}}>
+            <Footer/>
+        </div>
         </>
     )
 }

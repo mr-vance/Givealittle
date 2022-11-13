@@ -5,6 +5,7 @@ import {useHistory} from 'react-router-dom'
 import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 import {Icon} from 'react-icons-kit'
 import logo from '../Images/logo.png'
+import Button from 'react-bootstrap/Button';
 import Footer from '../Footer'
 
 
@@ -97,9 +98,10 @@ export const Signup = () => {
 
     return (
         <>
-             <br></br>
+        
+            
             <Navbar />
-        <div className='container'>
+        <div className='container' style={{marginTop:-25}}>
             <br></br>
             <br></br>
             <h1>Sign Up</h1>
@@ -124,7 +126,7 @@ export const Signup = () => {
                 <div className='btn-box'>
                     <span>Already have an account Login
                     <Link to="login" className='link'> Here</Link></span>
-                    <button type="submit" className='btn btn-success btn-md'>SIGN UP</button>
+                    <Button type="submit" variant="outline-primary">Sign Up</Button>
                 </div>
             </form>
             {errorMsg&&<>
@@ -132,7 +134,10 @@ export const Signup = () => {
                 <div className='error-msg'>{errorMsg}</div>                
             </>}
         </div>
-        <Footer/>
+        <div className='footer' style={{marginTop:100}}>
+            <Footer/>
+        </div>
+        
         </>
     )
 }

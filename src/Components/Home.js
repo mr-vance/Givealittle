@@ -10,6 +10,7 @@ import { AiOutlineHeart } from "react-icons/ai"
 import Footer from '../Footer'
 import BootstrapCarousel from './BootstrapCarousel'
 import "./App.css";
+import Button from 'react-bootstrap/Button';
 import StarRating from './StarRating'
 
 
@@ -77,7 +78,7 @@ export const Home = (props) => {
                     {user&&<>
 
                       <div className='centerside'>
-                  <div><Link className='navlink' to="/add-products" style={{color: 'white'}} >Are you a seller?</Link></div>
+                  <div><Link className='navlink' to="/add-products" style={{color: 'white'}} >SellPoint</Link></div>
                 </div>
                     
                         <div><Link className='navlink' to="/">{user}</Link></div>
@@ -267,7 +268,10 @@ export const Home = (props) => {
           
           
           <Navbar />
-          <BootstrapCarousel />
+          <div className='slider' style={{marginTop:10, marginBottom:10}}>
+            <BootstrapCarousel />
+          </div>
+          
           
           {
             
@@ -314,7 +318,9 @@ export const Home = (props) => {
           }
           
           
-          <Footer/>
+          <div className='footer' style={{marginTop:100}}>
+            <Footer/>
+        </div>
         </div>
         
   

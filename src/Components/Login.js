@@ -5,6 +5,8 @@ import {useHistory} from 'react-router-dom'
 import logo from '../Images/logo.png'
 import Footer from '../Footer'
 import {Icon} from 'react-icons-kit'
+import "rsuite/dist/rsuite.min.css";
+import { Button } from 'react-bootstrap'
 import {shoppingCart} from 'react-icons-kit/feather/shoppingCart'
 
 export const Login = () => {
@@ -49,7 +51,7 @@ export const Login = () => {
        
     //Navigation bar
         return (
-            <div className='navbar'>
+            <div className='navbar' style={{marginTop:-25}} >
                 <div className='leftside'>
                     <div className='logo'>
                         <Link to="/">
@@ -135,7 +137,7 @@ export const Login = () => {
                     <span>Don't have an account SignUp
                     <Link to="signup" className='link'> Here</Link></span>
 
-                    <button type="submit" className='btn btn-success btn-md'>LOGIN</button>
+                    <Button type="submit" variant="outline-primary">LogIn</Button>
                 </div>
                 
             </form>
@@ -144,7 +146,9 @@ export const Login = () => {
                 <div className='error-msg'>{errorMsg}</div>                
             </>}
         </div>
-        <Footer/>
+        <div className='footer' style={{marginTop:100}}>
+            <Footer/>
+        </div>
         </>
     )
 }
