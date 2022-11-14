@@ -1,5 +1,5 @@
 [![codecov](https://codecov.io/gh/tiisetsohub/GiveALittle/branch/main/graph/badge.svg?token=UP3WVJRWXL)](https://codecov.io/gh/tiisetsohub/GiveALittle)
-[![repo size](https://img.shields.io/github/repo-size/tiisetsohub/GiveALittle)](https://github.com/tiisetsohub/GiveALittle)
+[![repo size](https://img.shields.io/github/repo-size/Vance97/Givealittle)](https://github.com/Vance97/Givealittle)
 
 # Getting Started with Create React App
 
