@@ -1,0 +1,33 @@
+
+.categories-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+.category {
+    width: max-content;
+    margin: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 15px;
+    transition: 0.3s;
+    animation: ease-in;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.category:hover{
+    transform: translate(5px);
+    box-shadow: 0px 0px 5px -5px rgb(84, 84, 84);
+    
+}
+
+.category:active{
+    transform: scaleX(1);
+    margin-right: 20px;
+    
+}

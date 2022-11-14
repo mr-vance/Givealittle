@@ -1,0 +1,14 @@
+.card-cont{
+    padding-bottom: 10px;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
+
+.block{
+    display:inline-flexbox;
+    width: 140px;
+    text-align: left;
+}
+
+

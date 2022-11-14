@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+.Track{
+    font-family: 'Roboto', sans-serif;
+}
+.heading{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    
+}
+.btnclose{
+    background-color: rgb(8, 85, 59);
+}
+.cont-div{    
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    width: 50%;
+    padding-left: 40px;
+}
+.right{
+    width: 50%;
+}

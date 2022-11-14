@@ -1,0 +1,18 @@
+.tabs-container {
+    display: flex;
+    justify-content: center;
+}
+
+.tab {
+    border: none;
+    border-radius: 15px;
+    margin: 15px;
+    font-weight: bold;
+    background-color: #e5dacb;
+    transition: 0.5s;
+    animation: ease-in;
+}
+
+.tab:hover {
+    transform: translate(10px);
+}

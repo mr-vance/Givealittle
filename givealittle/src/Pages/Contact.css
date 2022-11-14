@@ -1,0 +1,41 @@
+.contact-card {
+    background-color: #FAEBD7;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.block2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-input{ 
+    border: 1px solid #B38B59;
+    border-radius: 3px;
+    background-color: white;
+    padding-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.contact-textarea{
+    border: 1px solid #B38B59;
+    border-radius: 3px;
+    background-color: white;
+    height: 150px;
+    padding: 10px;
+}
+
+.subbut{
+    text-align: center;
+    height: 40px;
+    margin: 20px;
+    border: 0px solid;
+    border-radius: 5px;
+    width: 100px;
+    background-color: #B38B59;
+    color: white;
+}

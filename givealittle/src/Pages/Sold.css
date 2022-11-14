@@ -1,0 +1,36 @@
+.sold-items{
+    align-content: center;
+}
+.prodView{    
+    display: flex;
+    justify-content: space-between;
+}
+.left-side{
+    width: 50%;
+    padding-left: 50px;
+    padding-top:50px;
+}
+.right-side{
+    width: 50%;
+    padding-left: 50px;
+    padding-top:50px;
+
+}
+
+.buyer{
+    color:black;
+    font-size: 25px;
+    padding-top:10px;
+}
+.btn-update{
+    color:white;
+    background-color:rgb(36, 113, 175);
+    width:60px;
+    height:fit-content;
+    border-radius:7px;
+    padding-left: 4px;
+}
+.btn-update-cont{
+    padding-left: 40%;
+    padding-top: 10px;
+}

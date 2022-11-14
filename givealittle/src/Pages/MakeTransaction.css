@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+
+
+#btn {
+    text-align: center;
+    height: 40px;
+    width: 133px;
+    margin: 20px;
+    border: 0px solid;
+    border-radius: 5px;
+}
+
+.btnsignup {
+    background-color: #113E21;
+    color: white;
+}
+
+.btnlogin {
+    background-color: #B38B59;
+    color: white;
+}
+
+.bigdiv {
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    color: #113E21;
+
+}
+
+text {
+    font-family: Inter;
+    font-size: 10px;
+    color: #113E21;
+}
+
+.payement-text {
+    font-size: 15px;
+    margin-right: 10px;
+
+}
+
+.payement-text-expdate {
+    font-size: 15px;
+    margin-right: -3px;
+
+}
+
+.payement-text-cvv {
+    font-size: 15px;
+    margin-right: 35px;
+
+}
+
+.payement-text-cardno {
+    font-size: 15px;
+    margin-right: 2px;
+
+}
+
+
+
+.input {
+    width: 300px;
+    height: 100px;
+    border-radius: 10px solid;
+    margin: 10px;
+    background-color: blue;
+    border: 5px solid #B38B59;
+
+}
+
+.itemname {
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+.container {
+    margin: 30px auto;
+    overflow: auto;
+    padding: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.buyttonin-cont-pay {
+    margin: 10px;
+    height: 28px;
+    border-radius: 3px;
+    background-color: #B38B59;
+    border: 0px solid;
+    color: white;
+    justify-content: center;
+
+}
+
+.buyttonin-add-card {
+    margin: 10px;
+    height: 28px;
+    border-radius: 3px;
+    background-color: #B38B59;
+    border: 0px solid;
+    color: white;
+    justify-content: center;
+    
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+
+}
+
+.cartitemdiv-p {
+    width: 100%;
+    background-color: #F0F0F0;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #B38B59;
+}
+
+.demodiv-p {
+    background-color: #113E21;
+    text-align: right;
+}
+
+.totalprice {
+    background-color: bisque;
+    width: 100%;
+    height: 80px;
+    display: flex;
+}
+
+.cartitemdiv-p {
+    background-color: #F0F0F0;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #B38B59;
+}
+
+.navbar-p {
+    background-color: #113E21;
+    width: 100%;
+    height: 80px;
+    display: flex;
+}
+
+.textin-p {
+    margin: 10px;
+    color: #FEFEFE;
+    margin-right: 10px;
+    width: max-content;
+    background-color: #082412;
+    font-size: 20px;
+    border-radius: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.center-add-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.totalbar {
+    background-color:#113E21;
+    width: 100%;
+    text-align:right;
+    padding-right: 20px;
+}
+
+.addressdiv{
+    margin-top: 10px;
+    justify-content: space-between;
+    display: flex;
+    width : 100%;
+    border-bottom: 1px solid #B38B59;
+    
+    margin-top: -15px;
+}
+
+.addressdiv img {
+    justify-content: left;
+    height : 120px;
+    width : 120px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.addressdiv div {
+    padding-right: 30px;
+    padding-top: 30px;
+    justify-content: right;
+    text-align: right;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.sumdiv {
+    align-content: center;
+    text-align: center;
+    
+}
+
+.btncomplete{
+    transition: 0.5s;
+    animation: ease-in;
+    height: 28px;
+    background-color: #B38B59;
+    border-radius: 3px;
+    border: 0px solid;
+    color: white;
+    margin: 8px 0;
+}
+
+.btnclick {
+
+    margin-right: -5px;
+}
+
+
+
+.itemquantity {
+    width: max-content;
+    background-color: #eee8e0;
+    font-size: 14px;
+    float: right;
+    border-radius: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: -8px;
+}
+
+.btndecrement{
+    transition: 0.5s;
+    animation: ease-in;
+    height: 28px;
+    background-color: #B38B59;
+    border-radius: 3px;
+    border: 0px solid;
+    color: white;
+    margin: 8px 0;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.itemprice {
+    display: flex;
+    background-color: #eee8e0;
+    font-size: 14px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+}
+
+.cart-item-name {
+    margin: auto; ;
+    padding-right: 30px;
+    padding-top: 30px;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.pricediv {
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #eee8e0;
+    font-size: 14px;
+    border-radius: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+
+.btnremove img {
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    
+
+}
+.btnremove{
+    border: 0px;
+}

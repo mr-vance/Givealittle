@@ -1,0 +1,166 @@
+.mainin{
+    margin : 0px 40px;
+    text-align: center;
+}
+
+.maininbig{
+    height : 400px;
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 30px;
+    background: linear-gradient(-45deg, #113E21, #B38B59, #113E21, #B38B59);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.totalh1{
+    font-weight: bold;
+    color: white;
+    
+}
+
+.mainindivbig{
+    margin: 0 70px;
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    justify-content: space-around;
+    display: flex;
+    height : 340px;
+    padding-top: 20px;
+}
+
+.vicdiv{
+    height :320px;
+    width : 800px;
+    overflow : hidden;
+    text-overflow: ellipsis;
+}
+
+.vich1{
+    width : 600px;
+    text-align: left;
+}
+
+.vich1 h5{
+    padding-top: 100px;
+    color: white;
+}
+.totalsaleh1{
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.sumindiv{
+    margin-top: 10px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.sumindiv div{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    width : 32%;
+    height : 150px;
+    border-radius: 5px;
+    padding : 5px;
+    transition: 0.5s;
+    animation: ease-in;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.topbuyerh4{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sumindiv div:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px 0px rgb(136, 136, 136);
+}
+
+.sumindiv div h6{
+    margin-top: 5px;
+    margin-left: 5px;
+    text-align: left;
+}
+
+.sumindiv div h3 {
+    text-align: right;
+    margin-top: 80px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.allprodsdiv{
+    background-color: #F5F5F5;
+    margin: 10px 30px;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+
+.allprodheaddiv{
+    justify-content: space-around;
+    display: flex;
+    border-bottom: 1px solid #113E21;
+    
+}
+
+.allprodsin{
+    justify-content: space-around;
+    display: flex;
+    padding: 10px 0px;
+}
+
+.ltet{
+    flex: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.rtet{
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 50px;
+}
+
+.vichicdiv{
+    height: 480px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.histhead{
+    margin: 10px 0px;
+    text-align: center;
+    
+}
+
+.histsumdiv{
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.wholpdiv{
+    margin: 0 10px;
+}

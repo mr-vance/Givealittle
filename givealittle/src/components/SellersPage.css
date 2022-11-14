@@ -1,0 +1,294 @@
+.products-container {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.add-product-button{
+    width: 150px;
+    height: 28px;
+    border: none;
+    background-color: #B38B59;
+    border-radius: 3px;
+    transition: 0.5s;
+    animation: ease-in;
+    font-weight: bold;
+    color: aliceblue;
+    box-shadow: 0px 0px 10px -5px rgb(59, 59, 59);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.add-product-button:hover{
+    transform: scale(1.08);
+    box-shadow: 0px 0px 15px -5px rgb(84, 84, 84);
+}
+
+.card {
+    width: auto;
+    height: auto;
+    display: flex;
+    margin: 15px;
+    border-radius: 10px;
+    transition: 0.5s;
+    animation: ease-in-out;
+    box-shadow: 0px 0px 10px -5px rgb(158, 158, 158);
+}
+
+.card:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 0px 15px -5px rgb(95, 95, 95);
+}
+
+
+.card-image{
+    object-fit: contain;
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px -5px rgb(93, 93, 93);
+    top: 0px;
+    left: 0px
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: #f9f8f6;
+}
+
+.numbers-container {
+    display: flex;
+    width: auto;
+    height: 185px;
+    flex-direction: column;
+    background-color: #f9f8f6;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    top: 60px;
+    left: 255px;
+    right: 5px;
+}
+
+.name{
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    top: 15px;
+    left: 260px
+}
+
+.delete-button {
+    width: auto;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border: none;
+    background-color: transparent;
+    border-radius: 15px;
+    color:#C25450;
+    transition: 0.5s;
+    animation:alternate;
+}
+
+.delete-button:hover{
+    transform: scale(1.3);
+}
+
+.delete-button:active {
+    color: rgb(255, 250, 104);
+}
+
+.edit-button {
+    width: auto;
+    position: absolute;
+    right: 60px;
+    top: 15px;
+    border: none;
+    background-color: transparent;
+    border-radius: 15px;
+    color: #50A181;
+    transition: 0.5s;
+    animation:alternate;
+}
+
+.edit-button:hover{
+    transform: scale(1.3);
+}
+
+.edit-button:active {
+    color:rgb(255, 250, 104);
+}
+
+.description {
+    font-size: 14px;
+}
+
+
+
+.price {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.stock {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
+.sold {
+    font-size: 16px;}
+
+.seller-details-container {
+    margin-top: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 30px;
+    background-color: #eee8e0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profile-details-container {
+    margin-top: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 30px;
+    background-color: #eee8e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.detail-bg {
+    background-color: #fffaf4;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.detail{
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.button-add-spec {
+    border: none;
+    border-radius: 5px;
+    background-color: #50A181;
+    height: 35px;
+    color: white;
+    margin-top: 6px;
+}
+
+.body {
+    background-color: white;
+}
+
+.expand-less {
+    color:darkslategrey;
+    margin: 5px;
+}
+
+.expand-more {
+    color:darkslategrey;
+    margin: 5px;
+}
+
+.more-info {
+    display: inline-block;
+    color: darkslategrey;
+    font-size: smaller;
+}
+
+.collapse-button {
+    transition: 0.5s;
+    height: 40px;
+    animation: alternate;
+    display: inline-block;
+    border-radius: 15px;
+    padding-right: 5px;
+    margin-top: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+.reviews-button{
+    transition: 0.5s;
+    animation: alternate;
+    display: inline-block;
+    border-radius: 15px;
+    padding-right: 5px;
+    margin-left: 15px;
+    margin-top: 5px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+}
+
+.collapse-button:hover {
+    transform: translate(15px);
+    background-color: #e7e7e7;
+}
+
+.reviews-button:hover {
+    transform: translate(15px);
+    background-color: #e7e7e7;
+}
+
+.show-reviews {
+    display: inline-block;
+}
+
+.no-reviews {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.comment {
+    font-size: 14px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 5px;
+    margin-left: 25px;
+    position: relative;
+    top: -15px
+}
+
+.collapse-all-button{
+    transition: 0.5s;
+    animation: alternate;
+    border-radius: 15px;
+    padding-right: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 5px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    float: right;
+}
+
+.collapse-all-button:hover {
+    transform: translate(-15px);
+    background-color: #e7e7e7;
+}
+
+.product-categories {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+    color:#50A181;
+}
