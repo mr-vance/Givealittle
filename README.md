@@ -2,7 +2,6 @@
 
 ## Introduction
 
-[![CircleCI](https://circleci.com/gh/tiisetsohub/GiveALittle/tree/dummy-transaction.svg?style=svg)](https://circleci.com/gh/tiisetsohub/GiveALittle/tree/dummy-transaction)
 [![codecov](https://codecov.io/gh/tiisetsohub/GiveALittle/branch/main/graph/badge.svg?token=UP3WVJRWXL)](https://codecov.io/gh/tiisetsohub/GiveALittle)
 [![repo size](https://img.shields.io/github/repo-size/tiisetsohub/GiveALittle)](https://github.com/tiisetsohub/GiveALittle)
 
