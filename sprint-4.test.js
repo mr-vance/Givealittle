@@ -1,4 +1,4 @@
-const tests = require("./specsT");
+const tests = require("./sprint-4");
 
 test("check valid name and email", () => {
     expect(tests[0]({ name: "TV", price: 100 }, 'price', 34)).toBe("Spec already added")

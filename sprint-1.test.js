@@ -1,4 +1,4 @@
-const tests = require("./allfunctions");
+const tests = require("./sprint-1");
 
 login = tests[0]
 signup = tests[1]

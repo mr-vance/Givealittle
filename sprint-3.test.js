@@ -1,4 +1,4 @@
-const tests = require("./landingT");
+const tests = require("./sprint-3");
 
 test("check stars update with reviews", () => {
     expect(tests[1]([2,2],2)).toBe(2)
