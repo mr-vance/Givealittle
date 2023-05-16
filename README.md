@@ -1,73 +1,56 @@
 [![codecov](https://codecov.io/gh/tiisetsohub/GiveALittle/branch/main/graph/badge.svg?token=UP3WVJRWXL)](https://codecov.io/gh/tiisetsohub/GiveALittle)
 [![repo size](https://img.shields.io/github/repo-size/Vance97/Givealittle)](https://github.com/Vance97/Givealittle)
 
-# Getting Started with Create React App
+# GiveALittle E-commerce Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![alt text](slider.png)
 
-## Available Scripts
+GiveALittle is an e-commerce web application developed using ReactJS, HTML, and CSS. It allows users to register, log in, purchase and sell second-hand products online. The project was developed over a period of 3 months and involved the following contributors:
 
-In the project directory, you can run:
+1. Faith Mogkalaka
+2. Olwethu Goniwe
+3. Vance Muchongo
+4. Thibello Khaile
+5. Aubrey Nalane
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Sprint 1
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- LoginPage
+- SignUpPage
+- HomePage
+- CartPage
 
-### `npm test`
+### Sprint 2
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Add Product
+- Search
+- Animation on Product Hover
+- Individual Product Pop-up on-Click
+- Payment Method Via Stripe Integrated
+- Unit Tests Introduced for Sign In, Add Product, and Cart Pages
+- All Contributors Showing on the List
+- AddProducts Page
+- LogoutButton
 
-### `npm run build`
+### Sprint 3
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Wish List
+- Forgot Password (not working)
+- Checkout support integrated with paygate
+- Cart notification color updated to green
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Sprint 4.0 Latest
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Footer on all pages now available
+- Carousel for product updates on homepage now available
+- Sell Point for registered users now available
+- Additional personalized message on empty cart or wishlist pages
+- UX improvements
 
-### `npm run eject`
+## Duration
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The duration of the project was 3 months.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
